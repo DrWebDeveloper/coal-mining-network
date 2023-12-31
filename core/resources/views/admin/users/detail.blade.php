@@ -138,19 +138,19 @@
                         @csrf
 
                         <div class="row">
-                            <div class="col-md-6">
+                            <div class="col-md-12">
                                 <div class="form-group ">
-                                    <label>@lang('First Name')</label>
+                                    <label>@lang('Full Name')</label>
                                     <input class="form-control" type="text" name="firstname" required value="{{$user->firstname}}">
                                 </div>
                             </div>
 
-                            <div class="col-md-6">
+                            {{-- <div class="col-md-6">
                                 <div class="form-group">
                                     <label class="form-control-label">@lang('Last Name')</label>
                                     <input class="form-control" type="text" name="lastname" required value="{{$user->lastname}}">
                                 </div>
-                            </div>
+                            </div> --}}
                         </div>
 
                         <div class="row">

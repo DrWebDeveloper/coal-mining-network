@@ -9,14 +9,14 @@
                         <form class="register" action="" method="post" enctype="multipart/form-data">
                             @csrf
                             <div class="row">
-                                <div class="form-group col-sm-6">
-                                    <label class="form-label">@lang('First Name')</label>
+                                <div class="form-group col-sm-12">
+                                    <label class="form-label">@lang('Full Name')</label>
                                     <input type="text" class="form--control" name="firstname" value="{{$user->firstname}}" required>
                                 </div>
-                                <div class="form-group col-sm-6">
+                                {{-- <div class="form-group col-sm-6">
                                     <label class="form-label">@lang('Last Name')</label>
                                     <input type="text" class="form--control" name="lastname" value="{{$user->lastname}}" required>
-                                </div>
+                                </div> --}}
                             </div>
                             <div class="row">
                                 <div class="form-group col-sm-6">
@@ -28,7 +28,7 @@
                                     <input class="form--control" value="{{$user->mobile}}" readonly>
                                 </div>
                             </div>
-                            <div class="row">
+                            {{-- <div class="row">
                                 <div class="form-group col-sm-6">
                                     <label class="form-label">@lang('Address')</label>
                                     <input type="text" class="form--control" name="address" value="{{@$user->address->address}}">
@@ -37,10 +37,10 @@
                                     <label class="form-label">@lang('State')</label>
                                     <input type="text" class="form--control" name="state" value="{{@$user->address->state}}">
                                 </div>
-                            </div>
+                            </div> --}}
 
 
-                            <div class="row">
+                            {{-- <div class="row">
                                 <div class="form-group col-sm-4">
                                     <label class="form-label">@lang('Zip Code')</label>
                                     <input type="text" class="form--control" name="zip" value="{{@$user->address->zip}}">
@@ -56,7 +56,7 @@
                                     <input class="form--control" value="{{@$user->address->country}}" disabled>
                                 </div>
 
-                            </div>
+                            </div> --}}
 
                             <div class="form-group">
                                 <button type="submit" class="btn btn--base w-100">@lang('Submit')</button>

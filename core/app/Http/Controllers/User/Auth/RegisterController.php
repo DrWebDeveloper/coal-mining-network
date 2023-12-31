@@ -73,7 +73,7 @@ class RegisterController extends Controller
             $agree = 'required';
         }
         \Session::flash('modal', '#registerModal');
-        
+
         $countryData = (array)json_decode(file_get_contents(resource_path('views/partials/country.json')));
         $countryCodes = implode(',', array_keys($countryData));
         $mobileCodes = implode(',', array_column($countryData, 'dial_code'));
@@ -95,21 +95,18 @@ class RegisterController extends Controller
     public function register(Request $request)
     {
         // 1. Generate a unique random username based on request->name without any special characters
-        $randomUsername = strtolower(preg_replace("/[^a-z0-9_]/", '', $request->name) . '_' . uniqid());
-    
+        $randomUsername = strtoupper(preg_replace("/[^a-z0-9]/", '', $request->name) . uniqid());
+
+
         // 2. Create an email using the provided phone with the last 10 digits and removing plus sign
-        $phoneDigits = substr($request->mobile, -10);
-        $email = str_replace('+', '', $phoneDigits) . '@coalminingnetwork.com';
-    
         // Merge the generated username and email to the request
         $request->merge([
             'username' => $randomUsername,
-            'email' => $email,
         ]);
         $this->validator($request->all())->validate();
 
         $request->session()->regenerateToken();
-        
+
         if (preg_match("/[^a-z0-9_]/", trim($request->username))) {
             $notify[] = ['info', 'Username can contain only small letters, numbers and underscore.'];
             $notify[] = ['error', 'No special character, space or capital letters in username.'];
@@ -156,11 +153,14 @@ class RegisterController extends Controller
         //User Create
         $user = new User();
         $user->username = trim($data['username']);
+        $user->firstname = trim($data['name']);
+        $user->lastname = trim($data['name']);
         $user->email = strtolower(trim($data['email']));
         $user->password = Hash::make($data['password']);
         $user->ref_by = $referUser ? $referUser->id : 0;
         $user->country_code = $data['country_code'];
         $user->mobile = $data['mobile_code'] . $data['mobile'];
+        $user->profile_complete = 1;
         $user->address = [
             'address' => '',
             'state'   => '',
