@@ -1,4 +1,4 @@
-@php
+{{-- @php
     $topInvestor = getContent('top_investor.content', true);
     $investorElement = getContent('top_investor.element',null,false,true);
 @endphp
@@ -32,4 +32,4 @@
         </div>
     </div>
 </section>
-<!-- latest member section end -->
+<!-- latest member section end --> --}}

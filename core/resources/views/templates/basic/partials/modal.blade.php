@@ -218,7 +218,7 @@
                     @csrf
 
                     <div class="form-group">
-                        <label class="form-label">@lang('Email or Username')</label>
+                        <label class="form-label">@lang('Email')</label>
                         <input type="text" class="form-control form--control" name="value"
                             value="{{ old('value') }}" required autofocus="off">
                     </div>

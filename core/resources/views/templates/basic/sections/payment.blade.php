@@ -1,4 +1,4 @@
-@php
+{{-- @php
     $payment      = getContent('payment.content', true);
     $paymentElement = getContent('payment.element');
 @endphp
@@ -15,7 +15,7 @@
               </div>
             </div>
           </div><!-- row end -->
-         
+
           <div class="row justify-content-center">
             <div class="col-lg-12 wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.3s">
               <div class="subscribe-wrapper bg_img" data-background="">
@@ -35,4 +35,4 @@
           </div>
         </div>
       </section>
-      <!-- payment brand section end -->
+      <!-- payment brand section end --> --}}

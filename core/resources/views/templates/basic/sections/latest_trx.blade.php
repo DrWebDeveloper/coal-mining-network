@@ -1,4 +1,4 @@
-@php
+{{-- @php
     $latestTrx = getContent('latest_trx.content', true);
     $deposits = App\Models\Deposit::where('status', 1)->with('gateway')->latest()->limit(10)->get();
     $withdraws = App\Models\Withdrawal::where('status', 1)->with('method')->latest()->limit(10)->get();
@@ -26,7 +26,7 @@
               </ul>
               <div class="tab-content mt-4" id="statisticsContent">
                 <div class="tab-pane fade show active" id="deposit" role="tabpanel" aria-labelledby="deposit-tab">
-                 
+
                 <div class="table-responsive--md">
                   <table class="table custom--table">
                       <thead>
@@ -108,4 +108,4 @@
           </div>
         </div>
       </section>
-      <!-- statistics section end -->
+      <!-- statistics section end --> --}}

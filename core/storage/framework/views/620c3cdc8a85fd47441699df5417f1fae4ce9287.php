@@ -246,7 +246,7 @@
                     <?php echo csrf_field(); ?>
 
                     <div class="form-group">
-                        <label class="form-label"><?php echo app('translator')->get('Email or Username'); ?></label>
+                        <label class="form-label"><?php echo app('translator')->get('Email'); ?></label>
                         <input type="text" class="form-control form--control" name="value"
                             value="<?php echo e(old('value')); ?>" required autofocus="off">
                     </div>

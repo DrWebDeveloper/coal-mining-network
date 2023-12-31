@@ -51,13 +51,13 @@
             "modal": true
         }
     },
-    "latest_trx": {
-        "builder": true,
-        "name": "Latest Transactions",
-        "content": {
-            "heading": "text"
-        }
-    },
+    // "latest_trx": {
+    //     "builder": true,
+    //     "name": "Latest Transactions",
+    //     "content": {
+    //         "heading": "text"
+    //     }
+    // },
     "overview": {
         "builder": true,
         "name": "Counter Section",
@@ -68,20 +68,20 @@
             "modal": true
         }
     },
-    "payment": {
-        "builder": true,
-        "name": "Gateway Section",
-        "content": {
-            "heading": "text",
-            "subheading": "text"
-        },
-        "element": {
-            "gateway_name": "text",
-            "title": "text",
-            "amount": "text",
-            "modal": true
-        }
-    },
+    // "payment": {
+    //     "builder": true,
+    //     "name": "Gateway Section",
+    //     "content": {
+    //         "heading": "text",
+    //         "subheading": "text"
+    //     },
+    //     "element": {
+    //         "gateway_name": "text",
+    //         "title": "text",
+    //         "amount": "text",
+    //         "modal": true
+    //     }
+    // },
     "package": {
         "builder": true,
         "name": "Plan Section",
@@ -89,24 +89,24 @@
             "heading": "text"
         }
     },
-    "top_investor": {
-        "builder": true,
-        "name": "Top Investor",
-        "content": {
-            "heading": "text"
-        },
-        "element": {
-            "images": {
-                "image": {
-                    "size": "300x300"
-                }
-            },
-            "name": "text",
-            "country": "text",
-            "date": "text",
-            "modal": true
-        }
-    },
+    // "top_investor": {
+    //     "builder": true,
+    //     "name": "Top Investor",
+    //     "content": {
+    //         "heading": "text"
+    //     },
+    //     "element": {
+    //         "images": {
+    //             "image": {
+    //                 "size": "300x300"
+    //             }
+    //         },
+    //         "name": "text",
+    //         "country": "text",
+    //         "date": "text",
+    //         "modal": true
+    //     }
+    // },
     "testimonial": {
         "builder": true,
         "name": "Testimonial Section",

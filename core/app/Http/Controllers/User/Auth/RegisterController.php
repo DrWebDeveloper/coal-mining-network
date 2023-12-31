@@ -107,11 +107,11 @@ class RegisterController extends Controller
 
         $request->session()->regenerateToken();
 
-        if (preg_match("/[^a-z0-9_]/", trim($request->username))) {
-            $notify[] = ['info', 'Username can contain only small letters, numbers and underscore.'];
-            $notify[] = ['error', 'No special character, space or capital letters in username.'];
-            return back()->withNotify($notify)->withInput($request->all());
-        }
+        // if (preg_match("/[^a-z0-9_]/", trim($request->username))) {
+        //     $notify[] = ['info', 'Username can contain only small letters, numbers and underscore.'];
+        //     $notify[] = ['error', 'No special character, space or capital letters in username.'];
+        //     return back()->withNotify($notify)->withInput($request->all());
+        // }
 
         if (!verifyCaptcha()) {
             $notify[] = ['error', 'Invalid captcha provided'];
